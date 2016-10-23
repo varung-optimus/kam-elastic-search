@@ -1,4 +1,4 @@
-.sidenav-container {
+.sidenav-layout {
     min-height: calc(100vh - 64px);
 }
 
@@ -25,4 +25,8 @@
     a:active {
         text-decoration: none;
     }
+}
+
+.sidenav-container {
+    width:  200px;
 }
