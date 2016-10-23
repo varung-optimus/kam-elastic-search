@@ -2,18 +2,18 @@
 	<md-toolbar>
 		<div class="md-toolbar-tools">
 			<h1 class="u-brand"><strong class="u-primary-color">Ranger</strong></h1>
-			<md-button aria-label="Explore">
+			<md-button class="md-title" aria-label="Explore">
 				Explore
 			</md-button>
 		</div>
 	</md-toolbar>
 </div>
-<section layout="row" class="sidenav-container" flex>
-	<md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open=true md-whiteframe="2">
+<section layout="row" class="sidenav-layout" flex>
+	<md-sidenav class="md-sidenav-left sidenav-container" md-component-id="left" md-is-locked-open=true md-whiteframe="2">
 		<md-content class="sidenav-menu-display" layout-padding ng-controller="LeftCtrl">
 			<ul>
-				<li>
-					<a  href="">
+				<li class="md-subhead">
+					<a href="">
 					Data Applications
 					</a>
 				</li>
@@ -33,19 +33,6 @@
 	</md-sidenav>
 	<md-content flex>
 		<div ui-view></div>
-		<!--<div layout="column" layout-align="top center">
-			<p>
-				The left sidenav will 'lock open' on a medium (>=960px wide) device.
-			</p>
-			<p>
-				The right sidenav will focus on a specific child element.
-			</p>
-
-			
-		</div>
-
-		<div flex></div>-->
-
 	</md-content>
 
 </section>
