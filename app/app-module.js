@@ -11,7 +11,9 @@
       'ngMaterial',
       'ui.router',
       'home',
-      'md.data.table'
+      'md.data.table',
+      'elasticui',
+      'elasticsearch'
     ]).config(function ($mdThemingProvider) {
       $mdThemingProvider.theme('default');
         // .primaryPalette('indigo')
