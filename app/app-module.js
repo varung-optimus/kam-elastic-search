@@ -10,6 +10,8 @@
     .module('kamElasticSearch', [
       'ngMaterial',
       'ui.router',
+      'elasticui',
+      'elasticsearch',
       'home'
     ]).config(function ($mdThemingProvider) {
       $mdThemingProvider.theme('default')
