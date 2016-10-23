@@ -16,6 +16,12 @@
   function HomeCtrl($timeout, $mdSidenav, $log) {
     var vm = this;
     vm.ctrlName = 'HomeCtrl';
+    vm.settings = {
+      printLayout: true,
+      showRuler: true,
+      showSpellingSuggestions: true,
+      presentationMode: 'edit'
+    };
     vm.toggleLeft = buildToggler('left');
     vm.isOpenLeft = function () {
       return $mdSidenav('left').isOpen();
@@ -41,4 +47,4 @@
         });
     };
   }
-}());
+} ());

@@ -1,55 +1,22 @@
-<!--<div layout="column" style="height:500px;" ng-cloak>
-    <section layout="row" flex>
-	    <md-content flex layout-padding>
-			<div>
-				<md-button ng-click="home.toggleLeft()" ng-hide="home.isOpenLeft()" class="md-primary">
-					Toggle Left
-				</md-button>
-			</div>
-</div>
-<div flex></div>
-</md-content>
-<md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left">
-	<md-toolbar class="md-theme-light">
-		<h1 class="md-toolbar-tools">Sidenav Left</h1>
-	</md-toolbar>
-	<md-content ng-controller="LeftCtrl" layout-padding>
-		<form>
-			<md-input-container>
-				<label for="testInput">Test input</label>
-				<input type="text" id="testInput" ng-model="data" md-autofocus>
-			</md-input-container>
-		</form>
-		<md-button ng-click="close()" class="md-primary">
-			Close Sidenav Left
-		</md-button>
-	</md-content>
-</md-sidenav>
-</section>
-</div>-->
-
-<div ng-cloak>
-    <md-toolbar class="main-toolbar">
-      <div class="md-toolbar-tools">
-        <img class="navbar-icon-menu" ng-click="home.toggleLeft()" aria-hidden="true" ng-src="./menuIcon.svg">
-        <!--<i class="fa fa-bars u-menu-bars" ng-click="home.toggleLeft()" aria-hidden="true"></i>-->
-        <a href="/" class="u-brand"><strong class="u-primary-color">Offprint</strong></a>
-        <span flex></span>
-      </div>
-    </md-toolbar>
-    <section layout="row" flex>
-      <md-sidenav class="md-sidenav-left sidenav-width" md-component-id="left" md-whiteframe="4">
-        <md-toolbar class="main-toolbar md-toolbar-tools">
-          <a href="/"><strong class="u-primary-color">SideNav</strong></a>
-        </md-toolbar>
-        <md-content layout-margin>
-          <ul class="navbar-categories container">
-            <li class="section-style navbar-items" ng-click="closeLeft()" ng-repeat="category in categories"><a href="/articles/category/{{category.id}}">{{category.title}}</a></li>
-          </ul>
-        </md-content>
-      </md-sidenav>
-    </section>
-    <div class="container" class="" style="margin-top:1em;">
-      <div ng-view="" class=""></div>
-    </div>
+<md-content>
+  <div>
+    <md-button>Home</md-button>
+    <md-button>Item 1</md-button>
+    <md-button>Item 2</md-button>
+    <md-menu>
+      <md-button md-menu-origin ng-click="$mdOpenMenu()">Help</md-button>
+      <md-menu-content width="2">
+        <md-menu-item>
+          <md-button>Help</md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button>About</md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
   </div>
+  <!--<div class="nav-buttons">
+    <md-button class="md-raised md-accent">My profile</md-button>
+    <md-button class="md-raised md-warn">Log Out</md-button>
+  </div>-->
+</md-content>
