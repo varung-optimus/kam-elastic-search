@@ -15,5 +15,10 @@
   function LandedDataCtrl() {
     var vm = this;
     vm.ctrlName = 'LandedDataCtrl';
+    vm.query = {
+      order: 'name',
+      limit: 5,
+      page: 1
+    };
   }
 }());
