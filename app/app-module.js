@@ -10,11 +10,12 @@
     .module('kamElasticSearch', [
       'ngMaterial',
       'ui.router',
-      'home'
+      'home',
+      'md.data.table'
     ]).config(function ($mdThemingProvider) {
-      $mdThemingProvider.theme('default')
-        .primaryPalette('indigo')
-        .accentPalette('pink')
-        .backgroundPalette('blue-grey');
+      $mdThemingProvider.theme('default');
+        // .primaryPalette('indigo')
+        // .accentPalette('pink')
+        // .backgroundPalette('white');
     });
 }());

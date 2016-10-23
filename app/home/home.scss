@@ -4,5 +4,25 @@
 
 .sidenav-menu-display {
     height: 100%;
-    width: 200px;
+    background-color: lightgrey;
+    color: pink;
+    li {
+        margin-bottom: 2em
+    }
+    a:link {
+        text-decoration: none;
+        color: deeppink;
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    a:active {
+        text-decoration: none;
+    }
 }

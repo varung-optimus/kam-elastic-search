@@ -2,13 +2,12 @@
   'use strict';
 
   /* @ngdoc object
-   * @name home
+   * @name home.landedData
    * @description
    *
    */
   angular
-    .module('home', [
-      'ui.router',
-      'home.landedData'
+    .module('home.landedData', [
+      'ui.router'
     ]);
 }());
