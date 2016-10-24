@@ -16,7 +16,7 @@ module.exports = function (gulp, $, config) {
       },
       middleware: [
         {
-          route: "http://52.51.115.98/",
+          route: "/api",
           handle: function (req, res, next) {
             // send through proxy
             proxy.web(req, res, {
