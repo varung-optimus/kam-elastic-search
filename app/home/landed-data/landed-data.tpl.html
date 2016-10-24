@@ -2,7 +2,7 @@
 	<md-content>
 		<md-tabs md-dynamic-height md-border-bottom>
 			<!-- HDFS -->
-			<md-tab label="HDFS" eui-index="'landed_hdfs'">
+			<md-tab label="HDFS" eui-index="'landed_data'">
 				<md-content class="md-padding">
 					<!--{{indexVM.results.hits.hits}}-->
 					<md-toolbar class="md-table-toolbar md-default">
@@ -34,42 +34,29 @@
 					</md-table-container>
 					<md-table-pagination md-limit="landedData.query.limit" md-limit-options="[5, 10, 15]" md-page="landedData.query.page" md-total="{{indexVM.results.hits.hits.length}}"
 						md-page-select></md-table-pagination>
-
-
-					<md-toolbar class="md-table-toolbar md-default files-toolbar">
-						<div class="md-toolbar-tools">
-							<span>Files</span>
-						</div>
-					</md-toolbar>
-					<md-table-container>
-						<table md-table md-row-select multiple md-progress="promise">
-							<thead md-head md-order="query.order">
-								<tr md-row>
-									<th md-column>Path</th>
-									<th md-column>Size</th>
-									<th md-column>Last Modified</th>
-									<th md-column>Ingestion User</th>
-									<th md-column>SIA SOURCE</th>
-									<th md-column>STATUS</th>
-								</tr>
-							</thead>
-							<tbody md-body>
-								<tr md-row md-select-id="name" md-auto-select ng-repeat="dessert in desserts.data">
-									<td md-cell>dessert.name</td>
-									<!--<td md-cell>{{dessert.calories.value}}</td>
-									<td md-cell>{{dessert.fat.value | number: 1}}</td>
-									<td md-cell>{{dessert.carbs.value}}</td>
-									<td md-cell>{{dessert.protein.value | number: 1}}</td>
-									<td md-cell>{{dessert.sodium.value}}</td>
-									<td md-cell>{{dessert.calcium.value}}{{dessert.calcium.unit}}</td>
-									<td md-cell>{{dessert.iron.value}}{{dessert.iron.unit}}</td>-->
-								</tr>
-							</tbody>
-						</table>
-					</md-table-container>
-					<md-table-pagination md-limit="landedData.query.limit" md-limit-options="[5, 10, 15]" md-page="landedData.query.page" md-total="{{desserts.count}}"
-						md-page-select></md-table-pagination>
 				</md-content>
+				<md-tabs md-dynamic-height md-border-bottom>
+					<md-tab label="Properties">
+						<md-content class="md-padding">
+							<h4>Properties</h4>
+						</md-content>
+					</md-tab>
+					<md-tab label="Lineage">
+						<md-content class="md-padding">
+							<h4>Lineage</h4>
+						</md-content>
+					</md-tab>
+					<md-tab label="Tags">
+						<md-content class="md-padding">
+							<h4>Tags</h4>
+						</md-content>
+					</md-tab>
+					<md-tab label="Change Log">
+						<md-content class="md-padding">
+							<h4>Log</h4>
+						</md-content>
+					</md-tab>
+				</md-tabs>
 			</md-tab>
 			<!-- Hive -->
 			<md-tab label="HIVE">
@@ -105,6 +92,29 @@
 					<md-table-pagination md-limit="landedData.query.limit" md-limit-options="[5, 10, 15]" md-page="landedData.query.page" md-total="{{indexVM.results.hits.hits.length}}"
 						md-page-select></md-table-pagination>
 				</md-content>
+
+				<md-tabs md-dynamic-height md-border-bottom>
+					<md-tab label="Schema">
+						<md-content class="md-padding">
+							<h4>Schema</h4>
+						</md-content>
+					</md-tab>
+					<md-tab label="Lineage">
+						<md-content class="md-padding">
+							<h4>Lineage</h4>
+						</md-content>
+					</md-tab>
+					<md-tab label="Tags">
+						<md-content class="md-padding">
+							<h4>Tags</h4>
+						</md-content>
+					</md-tab>
+					<md-tab label="Change Log">
+						<md-content class="md-padding">
+							<h4>Log</h4>
+						</md-content>
+					</md-tab>
+				</md-tabs>
 			</md-tab>
 		</md-tabs>
 	</md-content>
