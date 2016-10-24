@@ -13,7 +13,8 @@
       'home',
       'md.data.table',
       'elasticui',
-      'elasticsearch'
+      'elasticsearch',
+      'base64'
     ]).config(function ($mdThemingProvider) {
       $mdThemingProvider.theme('default');
     });

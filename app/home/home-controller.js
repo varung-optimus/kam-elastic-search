@@ -13,7 +13,9 @@
     .controller('HomeCtrl', HomeCtrl)
     .controller('LeftCtrl', LeftCtrl);
 
-  function HomeCtrl($timeout, $mdSidenav, $log) {
+  function HomeCtrl($timeout, $mdSidenav, $log, RadiusService) {
+    // RadiusService.getAtlasEntities();
+    // RadiusService.getAtlasLineage();
     var vm = this;
     vm.ctrlName = 'HomeCtrl';
     vm.settings = {
