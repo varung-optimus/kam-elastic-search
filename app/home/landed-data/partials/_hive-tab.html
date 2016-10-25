@@ -1,0 +1,57 @@
+<div eui-index="'landed_hive'">
+    <md-content class="md-padding">
+        <md-table-container>
+            <table md-table md-row-select multiple md-progress="promise">
+                <thead md-head md-order="query.order">
+                    <tr md-row>
+                        <th md-column>Comment</th>
+                        <th md-column>Created Date</th>
+                        <th md-column>DB Name</th>
+                        <th md-column>Ingest User</th>
+                        <th md-column>SIA SOURCE</th>
+                        <th md-column>STATUS</th>
+                        <th md-column>Table Name</th>
+                        <th md-column>Table Type</th>
+                    </tr>
+                </thead>
+                <tbody md-body>
+                    <tr md-row md-select="item" md-select-id="name" md-auto-select ng-repeat="item in indexVM.results.hits.hits| limitTo: landedData.query.limit: (landedData.query.page - 1) * landedData.query.limit">
+                        <td md-cell>{{item._source.comment}}</td>
+                        <td md-cell>{{item._source.created_date}}</td>
+                        <td md-cell>{{item._source.db_name}}</td>
+                        <td md-cell>{{item._source.ingest_user}}</td>
+                        <td md-cell>{{item._source.sia_source}}</td>
+                        <td md-cell>{{item._source.status}}</td>
+                        <td md-cell>{{item._source.table_name}}</td>
+                        <td md-cell>{{item._source.table_type}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+        <md-table-pagination md-limit="landedData.query.limit" md-limit-options="[5, 10, 15]" md-page="landedData.query.page" md-total="{{indexVM.results.hits.hits.length}}"
+            md-page-select></md-table-pagination>
+    </md-content>
+
+    <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Schema">
+            <md-content class="md-padding">
+                <h4>Schema</h4>
+            </md-content>
+        </md-tab>
+        <md-tab label="Lineage">
+            <md-content class="md-padding">
+                <h4>Lineage</h4>
+            </md-content>
+        </md-tab>
+        <md-tab label="Tags">
+            <md-content class="md-padding">
+                <h4>Tags</h4>
+            </md-content>
+        </md-tab>
+        <md-tab label="Change Log">
+            <md-content class="md-padding">
+                <h4>Log</h4>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+</div>

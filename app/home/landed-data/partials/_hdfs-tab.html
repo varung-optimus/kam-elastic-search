@@ -1,0 +1,56 @@
+<div  eui-index="'landed_hdfs'">
+    <md-content class="md-padding">
+        <!--{{indexVM.results.hits.hits}}-->
+        <md-toolbar class="md-table-toolbar md-default">
+            <div class="md-toolbar-tools">
+                <span>HDFS</span>
+            </div>
+        </md-toolbar>
+        <md-table-container>
+            <table md-table md-row-select multiple md-progress="promise">
+                <thead md-head md-order="query.order">
+                    <tr md-row>
+                        <th md-column>Directory</th>
+                        <th md-column>Last Modified</th>
+                        <th md-column>Ingestion User</th>
+                        <th md-column>SIA SOURCE</th>
+                        <th md-column>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody md-body>
+                    <tr md-row md-select-id="name" md-auto-select ng-repeat="item in indexVM.results.hits.hits">
+                        <td md-cell>{{item._source.path}}</td>
+                        <td md-cell>{{item._source.last_modification_date}}</td>
+                        <td md-cell>{{item._source.ingestion_user}}</td>
+                        <td md-cell>{{item._source.source_sia}}</td>
+                        <td md-cell>{{item._source.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+        <md-table-pagination md-limit="landedData.query.limit" md-limit-options="[5, 10, 15]" md-page="landedData.query.page" md-total="{{indexVM.results.hits.hits.length}}"
+            md-page-select></md-table-pagination>
+    </md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Properties">
+            <md-content class="md-padding">
+                <h4>Properties</h4>
+            </md-content>
+        </md-tab>
+        <md-tab label="Lineage">
+            <md-content class="md-padding">
+                <h4>Lineage</h4>
+            </md-content>
+        </md-tab>
+        <md-tab label="Tags">
+            <md-content class="md-padding">
+                <h4>Tags</h4>
+            </md-content>
+        </md-tab>
+        <md-tab label="Change Log">
+            <md-content class="md-padding">
+                <h4>Log</h4>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+</div>
